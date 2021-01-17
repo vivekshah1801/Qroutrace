@@ -6,6 +6,7 @@ import Auth from '../views/Auth.vue';
 import News from '../views/News.vue';
 import Alert from '../views/Alert.vue';
 import About from '../views/About.vue';
+import SignUp from '../components/SignUp.vue';
 
 Vue.use(VueRouter);
 
@@ -14,6 +15,11 @@ const routes = [
     path: '/',
     name: 'QRDisplay',
     component: QRDisplay,
+  },
+  {
+    path: '/signup',
+    name: 'SignUp',
+    component: SignUp,
   },
   {
     path: '/scan/',

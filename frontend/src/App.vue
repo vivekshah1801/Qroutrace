@@ -5,12 +5,14 @@
         <div class="headline">{{appname}}</div>
       </v-btn>
       <v-spacer></v-spacer>
-      <v-btn
-        text
-        v-on:click="logOut"
-      >
-        Log Out
-        <v-icon>mdi-lock</v-icon>
+      <v-btn text >
+        <router-link to="/"  class="white--text" >Home</router-link>
+      </v-btn>
+      <v-btn text >
+        <router-link to="/auth/"  class="white--text" >Login</router-link>
+      </v-btn>
+      <v-btn text>
+        <router-link to="/profile" class="white--text" >profile</router-link>
       </v-btn>
     </v-app-bar>
 
