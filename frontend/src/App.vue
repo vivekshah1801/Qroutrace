@@ -6,7 +6,7 @@
       </v-btn>
       <v-spacer></v-spacer>
       <v-btn text >
-        <router-link to="/"  class="white--text" >Home</router-link>
+        <router-link to="/home"  class="white--text" >Home</router-link>
       </v-btn>
       <v-btn text >
         <router-link to="/auth/"  class="white--text" >Login</router-link>

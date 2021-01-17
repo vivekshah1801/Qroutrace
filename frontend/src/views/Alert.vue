@@ -1,18 +1,17 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-alert
+    dense
+    outlined
+    type="error"
+    >
+    I'm a dense alert with the <strong>outlined</strong> prop and a <strong>type</strong> of error
+    </v-alert>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld,
-  },
+  name: 'Alert',
 };
 </script>

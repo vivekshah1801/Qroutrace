@@ -6,6 +6,7 @@ import Auth from '../views/Auth.vue';
 import News from '../views/News.vue';
 import Alert from '../views/Alert.vue';
 import About from '../views/About.vue';
+import Home from '../views/Home.vue';
 import SignUp from '../components/SignUp.vue';
 
 Vue.use(VueRouter);
@@ -45,6 +46,11 @@ const routes = [
     path: '/about/',
     name: 'About',
     component: About,
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: Home,
   },
 ];
 
