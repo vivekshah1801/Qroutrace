@@ -1,22 +1,44 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import QRScan from '../views/QRScan.vue';
+import QRDisplay from '../views/QRDisplay.vue';
+import Auth from '../views/Auth.vue';
+import News from '../views/News.vue';
+import Alert from '../views/Alert.vue';
+import About from '../views/About.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'QRDisplay',
+    component: QRDisplay,
   },
   {
-    path: '/about',
+    path: '/scan/',
+    name: 'QRScan',
+    component: QRScan,
+  },
+  {
+    path: '/auth/',
+    name: 'Auth',
+    component: Auth,
+  },
+  {
+    path: '/news/',
+    name: 'News',
+    component: News,
+  },
+  {
+    path: '/alerts/',
+    name: 'Alert',
+    component: Alert,
+  },
+  {
+    path: '/about/',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    component: About,
   },
 ];
 
