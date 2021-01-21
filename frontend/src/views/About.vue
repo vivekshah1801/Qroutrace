@@ -1,18 +1,36 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container>
+    <div class="about">
+      <h1>Creators</h1>
+      <v-spacer class="mb-4"></v-spacer>
+      <div v-for="team in teams" v-bind:key="team.name">
+        <h3>{{team.name}}</h3>
+        <a :href="team.github">
+          <h5>{{team.github}}</h5>
+        </a>
+        <v-spacer class="mb-3"></v-spacer>
+      </div>
+    </div>
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
-  name: 'About',
+  name: 'about',
   components: {
-    HelloWorld,
   },
+  data: () => ({
+    teams: [
+      {
+        name: 'Vivek Shah',
+        github: 'https://github.com/vivekshah1801',
+      },
+      {
+        name: 'Avina Vekariya',
+        github: 'https://github.com/avni0405',
+      },
+    ],
+  }),
 };
 </script>

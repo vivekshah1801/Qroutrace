@@ -11,11 +11,15 @@ app.use(cors());
 const port = process.env.PORT || 5000;
 app.set("port", port);
 
-const routes = require("./routes/api/index");
-// app.use("/api", routes);
+// Define Routes
+const visitsRoutes = require('./routes/visits')
+const authRoutes = require('./routes/auth')
 
-app.get('/',(req,res)=>{
-    res.json({'status':'healthy'});
+// Routing Setup
+app.use("/visit", visitsRoutes)
+app.use("/auth", authRoutes)
+app.use("/",(req,res)=>{
+    res.json({"status":"healthy", "timestamp": new Date().getTime()})
 })
 
 //We are running our application on server port : 5000

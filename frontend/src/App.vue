@@ -2,17 +2,14 @@
   <v-app>
     <v-app-bar app dark>
       <v-btn href="/" text>
-        <div class="headline">{{appname}}</div>
+        <div class="headline">
+          <v-icon>mdi-virus</v-icon>
+          {{appname}}
+        </div>
       </v-btn>
       <v-spacer></v-spacer>
-      <v-btn text >
-        <router-link to="/home"  class="white--text" >Home</router-link>
-      </v-btn>
-      <v-btn text >
-        <router-link to="/auth/"  class="white--text" >Login</router-link>
-      </v-btn>
       <v-btn text>
-        <router-link to="/profile" class="white--text" >profile</router-link>
+        <router-link to="/about" class="white--text">About</router-link>
       </v-btn>
     </v-app-bar>
 
